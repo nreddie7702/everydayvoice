@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173f32">
+  <meta name="description" content="Tell EverydayVoice about the everyday problems you face. Small Problems. Big Ideas.">
+  <title>EverydayVoice — Small Problems. Big Ideas.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" id="brand-home" aria-label="EverydayVoice home">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>Everyday<span class="brand-accent">Voice</span></span>
+      </a>
+      <span class="top-note">A space for real experiences</span>
+    </header>
+
+    <section class="screen landing-screen" id="home-screen">
+      <div class="landing-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> YOUR EXPERIENCE MATTERS</p>
+        <h1>Small Problems.<br><span>Big Ideas.</span></h1>
+        <p class="intro">Tell us about the everyday problems you face. Your honest experiences can help uncover ideas for solutions that truly matter.</p>
+        <button class="button button-primary start-button" id="start-button">
+          Share Your Experience <span aria-hidden="true">→</span>
+        </button>
+        <div class="trust-points">
+          <div><span class="trust-icon">✳</span><span>Every person's experience matters.</span></div>
+          <div><span class="trust-icon">♡</span><span>There are no right or wrong answers.</span></div>
+          <div><span class="trust-icon">↗</span><span>Honest feedback helps us understand real problems.</span></div>
+        </div>
+      </div>
+      <div class="illustration-wrap" aria-label="Illustration of everyday ideas and problem solving" role="img">
+        <div class="sun-disc"></div>
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="idea-card card-note"><span class="mini-spark">✳</span><strong>What if?</strong><small>New possibilities</small></div>
+        <div class="idea-card card-list"><i></i><i></i><i></i><b>...</b></div>
+        <div class="person">
+          <div class="person-head"><span class="hair"></span><span class="face-eye"></span></div>
+          <div class="person-body"></div>
+          <div class="person-arm"></div>
+        </div>
+        <div class="plant"><i></i><i></i><i></i><b></b></div>
+        <div class="idea-bubble">✦</div>
+        <p class="illustration-caption">Everyday thoughts can spark meaningful change.</p>
+      </div>
+      <div class="landing-footer"><span>6 thoughtful questions</span><span class="footer-separator">·</span><span>About 3–5 minutes</span><span class="footer-separator">·</span><span>Your voice, your words</span></div>
+    </section>
+
+    <section class="screen survey-screen hidden" id="survey-screen" aria-live="polite">
+      <div class="survey-heading">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> EVERYDAYVOICE SURVEY</p>
+        <h2>Let's hear it from you.</h2>
+        <p>Take your time. The most useful answers are the honest ones.</p>
+      </div>
+      <div class="progress-area">
+        <div class="progress-meta"><span id="progress-label">Question 1 of 6</span><span id="progress-percent">17%</span></div>
+        <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+      </div>
+      <form id="survey-form" novalidate>
+        <article class="question-panel">
+          <div class="question-kicker" id="question-number">QUESTION 01</div>
+          <h3 id="question-title">What is the most frustrating thing you face every day?</h3>
+          <label class="sr-only" for="answer-input">Your answer</label>
+          <textarea id="answer-input" maxlength="3000" placeholder="Type your answer here..." required></textarea>
+          <div class="answer-meta"><span>There is no perfect answer. Just write what comes to mind.</span><span id="char-count">0 / 3000</span></div>
+          <p class="validation-message" id="validation-message" role="alert"></p>
+        </article>
+        <div class="survey-actions">
+          <button type="button" class="button button-secondary" id="previous-button" disabled>← Previous</button>
+          <button type="button" class="button button-primary" id="next-button">Next question <span aria-hidden="true">→</span></button>
+          <button type="submit" class="button button-primary hidden" id="submit-button">Submit answers <span aria-hidden="true">→</span></button>
+        </div>
+        <p class="privacy-note"><span aria-hidden="true">🔒</span> Your answers are used for research into everyday problems and possible solutions.</p>
+      </form>
+    </section>
+
+    <section class="screen success-screen hidden" id="success-screen" aria-live="polite">
+      <div class="success-art"><span class="success-ring">✓</span><i class="success-spark spark-a">✦</i><i class="success-spark spark-b">✳</i></div>
+      <p class="eyebrow"><span class="eyebrow-dot"></span> RESPONSE RECEIVED</p>
+      <h2>Thank you for<br><span>speaking up.</span></h2>
+      <p class="success-copy">Your experience has been submitted successfully. Every honest response helps us see everyday challenges more clearly.</p>
+      <button class="button button-primary" id="home-button">Back to Home <span aria-hidden="true">→</span></button>
+    </section>
+
+    <footer class="site-footer"><span>EverydayVoice</span><span>Small Problems. Big Ideas.</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
